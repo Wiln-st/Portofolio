@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f0f0f;
+    color: white;
+    font-family: "Handlee", cursive;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.top-dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;         
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    opacity: 0;
+    pointer-events: none;   
+    transition: opacity 0.8s ease;
+    z-index: 70;             
+}
+
+/* Navbar */
+
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;               
+    transform: translateX(-50%);
+    width: auto;
+    margin: 25px auto;
+    padding: 0 40px;
+    border-radius: 25px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    transition: 
+        background 2s ease,
+        backdrop-filter 2s ease,
+}
+
+
+.navbar[data-aos] {
+    transform: translateX(-50%) !important;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.05); /* warna bg ketika scroll */
+    backdrop-filter: blur(10px);    /* efek kaca (opsional) */
+    z-index: 99;
+    border-radius: 50px;
+}
+
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    opacity: 0.8;
+    font-weight: bolder;
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+/* Hero section */
+.hero {
+    top: 100px;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero[data-aos] {
+    transform: translateY(50px) !important;
+}
+
+.title-bg {
+    font-size: 130px;
+    color: rgba(255,255,255,0);
+    -webkit-text-stroke: 2px rgba(255,255,255,0.03);
+    margin: 0;
+    transform: translateY(-50px);
+}
+
+.intro {
+    font-size: 60px;
+    margin-top: -180px;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-family: "Climate Crisis", sans-serif;
+    font-size: 90px;
+    color: #8166FF;
+    margin: 10px 0;
+}
+
+.job {
+    font-size: 30px;
+    opacity: 0.9;
+    margin-top: 50px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    transform: translateY(-30px);
+    padding: 10px 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* Social icons */
+.icons {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    color: white;
+    transform: translateY(30px);
+}
+
+.icons i {
+    color: #8166FF;
+}
+
+
+/* Contact section */
+.contact {
+    margin-top: 80px;
+    margin-left: 50px;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.contact-bg {
+    font-size: 130px;
+    color: rgba(255,255,255,0);
+    -webkit-text-stroke: 2px rgba(255,255,255,0.03);
+    margin: 0;
+    transform: translateY(60px);
+}
+
+.contact-title {
+    margin-top: -70px;
+    font-size: 60px;
+}
+
+.contact-list{
+    margin-top: 125px;
+    text-align: start;
+}
+
+.contact-list p {
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 5px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 0 25px;
+        top: 5px;
+    }
+
+    .navbar ul {
+        gap: 25px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    /* HERO */
+    .hero {
+        top: 100px;
+        padding: 20px;
+    }
+
+    .title-bg {
+        font-size: 60px;
+        transform: translateY(-20px);
+    }
+
+    .intro {
+        font-size: 28px;
+        margin-top: -60px;
+    }
+
+    .name {
+        font-size: 55px;
+    }
+
+    .job {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+
+    .icons {
+        transform: translateY(10px);
+        gap: 12px;
+    }
+
+    .icons i {
+        font-size: 20px;
+    }
+
+    /* CONTACT */
+    .contact {
+        margin-left: 0;
+        padding: 30px 10px;
+    }
+
+    .contact-bg {
+        font-size: 70px;
+        transform: translateY(20px);
+    }
+
+    .contact-title {
+        font-size: 35px;
+        margin-top: -40px;
+    }
+
+    .contact-list {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .contact-list p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 0 35px;
+        top: 10px;
+    }
+
+    .navbar ul {
+        gap: 40px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+    /* HERO */
+    .title-bg {
+        font-size: 100px;
+    }
+
+    .intro {
+        font-size: 40px;
+        margin-top: -120px;
+    }
+
+    .name {
+        font-size: 75px;
+    }
+
+    .job {
+        font-size: 24px;
+    }
+
+    /* CONTACT */
+    .contact-bg {
+        font-size: 100px;
+    }
+
+    .contact-title {
+        font-size: 50px;
+    }
+
+    .contact-list p {
+        font-size: 20px;
+    }
+}
